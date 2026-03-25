@@ -37,13 +37,13 @@ def chat():
 
     # 2. Construct the Payload
     payload = {
-        "model": "qwen/qwen3.5-122b-a10b",
+        "model": "z-ai/glm5",
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.7,
-        "top_p": 0.8,
+        "temperature": 1,
+        "top_p": 1,
         "max_tokens": 16384,
         "stream": False,
         "chat_template_kwargs": {
