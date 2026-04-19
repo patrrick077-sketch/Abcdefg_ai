@@ -42,9 +42,9 @@ def chat():
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 1,
+        "temperature": 0.3,
         "top_p": 1,
-        "max_tokens": 16384,
+        "max_tokens": 1024,
         "stream": False,
         "chat_template_kwargs": {
             "enable_thinking": False,
