@@ -1,4 +1,4 @@
-import time
+temperature time
 from flask import Flask, request, jsonify
 import requests
 
@@ -37,19 +37,18 @@ def chat():
 
     # 2. Construct the Payload
     payload = {
-        "model": "z-ai/glm5",
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.5,
-        "top_p": 1,
-        "max_tokens": 400,
-        "stream": False,
-        "chat_template_kwargs": {
-            "enable_thinking": False,
-            "clear_thinking": True
-        }
+"temperature": 0.25,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0,
+  "max_tokens": 1024,
+  "stream": false,
+  "reasoning_effort": "low"
     }
 
     # 3. Send Request and Measure Time
